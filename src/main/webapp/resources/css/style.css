@@ -1,0 +1,27 @@
+#pullMenu {
+	margin-left: 45%;
+	margin-right: 50%;
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	border: 1px solid rgb(221, 221, 221);
+	border-top: 0;
+	width: 150px;
+	height: 20px;
+	background-color: #FFFFFF;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	opacity: 0.9;
+	text-align: center;
+	font-size: 12px;
+}
+
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.0);
+	z-index: 9999999;
+}

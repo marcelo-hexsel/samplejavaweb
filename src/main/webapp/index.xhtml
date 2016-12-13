@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+  template="/template/master.xhtml">
+  <ui:define name="content">
+    <h:form>
+      <p:growl autoUpdate="true" showDetail="true" showSummary="true"></p:growl>
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-2">
+          <div class="form-group">
+            <label>#{resx.strWriteAMessage}</label>
+            <p:inputText value="#{indexController.inputContent}"></p:inputText>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-2">
+          <p:commandButton action="#{indexController.doAction()}" value="#{resx.strDoAction}"></p:commandButton>
+        </div>
+      </div>
+    </h:form>
+  </ui:define>
+</ui:composition>

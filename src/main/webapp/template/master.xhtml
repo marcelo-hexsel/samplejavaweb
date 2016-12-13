@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><ui:insert name="title">Sample Java Web</ui:insert></title>
+</h:head>
+<h:body style="overflow-x: hidden;">
+  <link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/css/bootstrap.css" />
+  <link type="text/css" rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/css/font-awesome.css" />
+  <h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+  <!--  Ajax Status -->
+  <p:ajaxStatus onstart="$('#pullMenu, #overlay').css('display','block');" onsuccess="$('#pullMenu, #overlay').css('display','none');" />
+  <div id="pullMenu" style="display: none;" class="wl-border-forced">#{resx.strLoading}</div>
+  <div id="overlay" style="display: none;"></div>
+  <ui:insert name="content">
+    
+  </ui:insert>
+  <h:outputScript library="primefaces" name="jquery/jquery.js" />
+  <script type="text/javascript" src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery-ui.min.js" />
+  <script type="text/javascript" src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery-ui-touch-punch.min.js" />
+  <script type="text/javascript" src="#{facesContext.externalContext.requestContextPath}/resources/js/bootstrap.min.js" />
+  <script type="text/javascript" src="#{facesContext.externalContext.requestContextPath}/resources/js/modernizr.custom.js" />
+  <script type="text/javascript" src="#{facesContext.externalContext.requestContextPath}/resources/js/scripts.js" />
+</h:body>
+</html>
